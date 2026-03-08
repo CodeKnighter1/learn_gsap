@@ -1,16 +1,21 @@
 import gsap from "gsap"
 import { cocktailLists, mockTailLists } from "@/constants"
 import { useGSAP } from "@gsap/react"
+import { useMediaQuery } from "react-responsive";
 
 
 function Cocktails() {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+
+    const startValue = isMobile ? 'top 50%' : 'top 30%';
+    const endValue = isMobile ? 'bottom 70%' : 'bottom 80%';
 
     useGSAP(() => {
         const parallaxTimeLine = gsap.timeline({
             scrollTrigger: {
                 trigger: '#cocktails',
-                start: 'top 30%',
-                end: 'bottom 80%',
+                start: startValue,
+                end: endValue,
                 scrub: true,
             }
         })
