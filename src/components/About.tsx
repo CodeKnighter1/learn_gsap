@@ -8,17 +8,23 @@ function About() {
         const titleSplit = SplitText.create('#about h2',
             { type: 'words' }
         );
+        const paragraphSplit = SplitText.create('#about p',
+            { type: 'lines' }
+        );
 
         const scrollTimeLine = gsap.timeline({
             scrollTrigger: {
                 trigger: '#about', 
-                start: 'top center',
+                start: 'top 70%',
             }
         });
 
         scrollTimeLine
         .from(titleSplit.words, {
             opacity: 0, duration: 1, yPercent: 100, ease: 'expo.out', stagger: 0.02
+        })
+        .from(paragraphSplit.lines, {
+            opacity: 0, duration: 1, yPercent: 100, ease: 'expo.out', stagger: 0.04
         })
         .from('.top-grid, .bottom-grid', {
             opacity: 0, duration: 1, ease: 'power1.inOut', stagger: 0.04
