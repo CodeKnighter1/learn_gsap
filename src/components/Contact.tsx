@@ -39,8 +39,8 @@ function Contact() {
 
                 <div>
                     <h3>Contact Us</h3>
-                    <p>(555) 987-6543</p>
-                    <p>hello@jsmcocktail.com</p>
+                    <p>+998 88 001 11 55</p>
+                    <p>rahmonqulqoraboyev01@gmail.com</p>
                 </div>
 
                 <div>
