@@ -28,7 +28,7 @@ function Menu() {
         })
         parallaxTimeLine
             .to('#m-left-leaf', {
-                x: -100, y: 100
+                x: -100, y: -100
             })
             .to('#m-right-leaf', {
                 x: 100, y: 100
